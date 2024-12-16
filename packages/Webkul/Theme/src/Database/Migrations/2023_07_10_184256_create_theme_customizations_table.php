@@ -19,7 +19,7 @@ return new class extends Migration
             $table->boolean('status')->default(0);
 
             $table->integer('channel_id')->unsigned();
-            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('cascade');
+            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('NO ACTION');
             $table->timestamps();
         });
     }

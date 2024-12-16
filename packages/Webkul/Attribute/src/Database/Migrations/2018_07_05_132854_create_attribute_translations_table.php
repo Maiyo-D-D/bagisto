@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('name')->nullable();
 
             $table->unique(['attribute_id', 'locale']);
-            $table->foreign('attribute_id')->references('id')->on('attributes')->onDelete('cascade');
+            $table->foreign('attribute_id')->references('id')->on('attributes')->onDelete('NO ACTION');
         });
     }
 

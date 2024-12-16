@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('locale');
             $table->text('default_name')->nullable();
 
-            $table->foreign('country_state_id')->references('id')->on('country_states')->onDelete('cascade');
+            $table->foreign('country_state_id')->references('id')->on('country_states')->onDelete('NO ACTION');
         });
     }
 

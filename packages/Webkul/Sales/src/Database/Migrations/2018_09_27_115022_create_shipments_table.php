@@ -30,8 +30,8 @@ return new class extends Migration
             $table->string('inventory_source_name')->nullable();
             $table->timestamps();
 
-            $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
-            $table->foreign('inventory_source_id')->references('id')->on('inventory_sources')->onDelete('set null');
+            $table->foreign('order_id')->references('id')->on('orders')->onDelete('NO ACTION');
+            $table->foreign('inventory_source_id')->references('id')->on('inventory_sources')->onDelete('NO ACTION');
         });
     }
 

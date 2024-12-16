@@ -18,8 +18,8 @@ return new class extends Migration
             $table->integer('inventory_source_id')->unsigned();
 
             $table->unique(['channel_id', 'inventory_source_id'], 'channel_inventory_source_unique');
-            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('cascade');
-            $table->foreign('inventory_source_id')->references('id')->on('inventory_sources')->onDelete('cascade');
+            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('NO ACTION');
+            $table->foreign('inventory_source_id')->references('id')->on('inventory_sources')->onDelete('NO ACTION');
         });
     }
 

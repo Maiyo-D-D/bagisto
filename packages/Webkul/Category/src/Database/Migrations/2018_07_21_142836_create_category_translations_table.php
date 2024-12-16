@@ -27,8 +27,8 @@ return new class extends Migration
             $table->string('locale');
 
             $table->unique(['category_id', 'slug', 'locale']);
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->foreign('locale_id')->references('id')->on('locales')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('NO ACTION');
+            $table->foreign('locale_id')->references('id')->on('locales')->onDelete('NO ACTION');
         });
     }
 

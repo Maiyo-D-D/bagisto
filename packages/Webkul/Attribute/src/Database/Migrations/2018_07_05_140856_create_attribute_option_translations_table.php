@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('label')->nullable();
 
             $table->unique(['attribute_option_id', 'locale'], 'attribute_option_locale_unique');
-            $table->foreign('attribute_option_id')->references('id')->on('attribute_options')->onDelete('cascade');
+            $table->foreign('attribute_option_id')->references('id')->on('attribute_options')->onDelete('NO ACTION');
         });
     }
 

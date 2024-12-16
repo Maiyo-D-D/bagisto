@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('cart_id')->nullable()->unsigned();
             $table->timestamps();
 
-            $table->foreign('cart_id')->references('id')->on('cart')->onDelete('cascade');
+            $table->foreign('cart_id')->references('id')->on('cart')->onDelete('NO ACTION');
         });
     }
 

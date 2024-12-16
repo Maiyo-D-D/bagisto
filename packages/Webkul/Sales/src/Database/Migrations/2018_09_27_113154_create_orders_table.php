@@ -73,8 +73,8 @@ return new class extends Migration
             $table->string('applied_cart_rule_ids')->nullable();
             $table->timestamps();
 
-            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('set null');
-            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('set null');
+            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('NO ACTION');
+            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('NO ACTION');
         });
     }
 

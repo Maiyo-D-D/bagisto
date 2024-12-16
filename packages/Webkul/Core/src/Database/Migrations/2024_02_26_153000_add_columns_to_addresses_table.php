@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedInteger('parent_address_id')->nullable()->after('address_type');
             $table->boolean('use_for_shipping')->default(0)->after('default_address');
 
-            $table->foreign('parent_address_id')->references('id')->on('addresses')->onDelete('set null');
+            $table->foreign('parent_address_id')->references('id')->on('addresses')->onDelete('NO ACTION');
         });
     }
 

@@ -25,7 +25,7 @@ return new class extends Migration
             $table->integer('cms_page_id')->unsigned();
 
             $table->unique(['cms_page_id', 'url_key', 'locale']);
-            $table->foreign('cms_page_id')->references('id')->on('cms_pages')->onDelete('cascade');
+            $table->foreign('cms_page_id')->references('id')->on('cms_pages')->onDelete('NO ACTION');
         });
     }
 

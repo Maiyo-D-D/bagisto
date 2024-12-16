@@ -25,7 +25,7 @@ return new class extends Migration
             $table->integer('cart_rule_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('cart_rule_id')->references('id')->on('cart_rules')->onDelete('cascade');
+            $table->foreign('cart_rule_id')->references('id')->on('cart_rules')->onDelete('NO ACTION');
         });
     }
 

@@ -31,7 +31,7 @@ return new class extends Migration
             $table->json('additional')->nullable();
             $table->timestamps();
 
-            $table->foreign('shipment_id')->references('id')->on('shipments')->onDelete('cascade');
+            $table->foreign('shipment_id')->references('id')->on('shipments')->onDelete('NO ACTION');
         });
     }
 

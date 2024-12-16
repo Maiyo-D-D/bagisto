@@ -21,9 +21,9 @@ return new class extends Migration
 
             $table->integer('channel_id')->unsigned()->default(1)->after('customer_group_id');
 
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-            $table->foreign('customer_group_id')->references('id')->on('customer_groups')->onDelete('cascade');
-            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('NO ACTION');
+            $table->foreign('customer_group_id')->references('id')->on('customer_groups')->onDelete('NO ACTION');
+            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('NO ACTION');
 
             $table->unique(['product_id', 'customer_group_id', 'channel_id'], 'price_indices_product_id_customer_group_id_channel_id_unique');
         });

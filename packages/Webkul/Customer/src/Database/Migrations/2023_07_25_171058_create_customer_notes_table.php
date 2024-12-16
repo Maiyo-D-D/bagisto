@@ -18,7 +18,7 @@ return new class extends Migration
             $table->boolean('customer_notified')->default(0);
             $table->timestamps();
 
-            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
+            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('NO ACTION');
         });
     }
 

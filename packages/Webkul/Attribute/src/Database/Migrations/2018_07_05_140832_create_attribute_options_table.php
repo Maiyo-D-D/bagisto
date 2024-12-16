@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('sort_order')->nullable();
             $table->string('swatch_value')->nullable();
 
-            $table->foreign('attribute_id')->references('id')->on('attributes')->onDelete('cascade');
+            $table->foreign('attribute_id')->references('id')->on('attributes')->onDelete('NO ACTION');
         });
     }
 

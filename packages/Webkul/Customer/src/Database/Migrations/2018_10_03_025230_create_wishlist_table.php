@@ -25,9 +25,9 @@ return new class extends Migration
             $table->json('additional')->nullable();
             $table->timestamps();
 
-            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('cascade');
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
+            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('NO ACTION');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('NO ACTION');
+            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('NO ACTION');
         });
     }
 

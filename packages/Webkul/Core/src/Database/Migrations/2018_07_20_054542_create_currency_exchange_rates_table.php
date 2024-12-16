@@ -17,7 +17,7 @@ return new class extends Migration
             $table->increments('id');
             $table->decimal('rate', 24, 12);
             $table->integer('target_currency')->unique()->unsigned();
-            $table->foreign('target_currency')->references('id')->on('currencies')->onDelete('cascade');
+            $table->foreign('target_currency')->references('id')->on('currencies')->onDelete('NO ACTION');
             $table->timestamps();
         });
     }

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('type')->nullable();
             $table->string('path');
 
-            $table->foreign('review_id')->references('id')->on('product_reviews')->onDelete('cascade');
+            $table->foreign('review_id')->references('id')->on('product_reviews')->onDelete('NO ACTION');
         });
     }
 

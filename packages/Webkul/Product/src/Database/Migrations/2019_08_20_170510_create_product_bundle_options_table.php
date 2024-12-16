@@ -20,7 +20,7 @@ return new class extends Migration
             $table->boolean('is_required')->default(1);
             $table->integer('sort_order')->default(0);
 
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('NO ACTION');
         });
     }
 

@@ -27,10 +27,10 @@ return new class extends Migration
             $table->integer('marketing_event_id')->unsigned()->nullable();
             $table->timestamps();
 
-            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('set null');
-            $table->foreign('customer_group_id')->references('id')->on('customer_groups')->onDelete('set null');
-            $table->foreign('marketing_template_id')->references('id')->on('marketing_templates')->onDelete('set null');
-            $table->foreign('marketing_event_id')->references('id')->on('marketing_events')->onDelete('set null');
+            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('NO ACTION');
+            $table->foreign('customer_group_id')->references('id')->on('customer_groups')->onDelete('NO ACTION');
+            $table->foreign('marketing_template_id')->references('id')->on('marketing_templates')->onDelete('NO ACTION');
+            $table->foreign('marketing_event_id')->references('id')->on('marketing_events')->onDelete('NO ACTION');
         });
     }
 

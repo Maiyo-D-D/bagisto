@@ -29,7 +29,7 @@ return new class extends Migration
             $table->integer('sort_order')->nullable();
             $table->timestamps();
 
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('NO ACTION');
         });
     }
 

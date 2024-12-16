@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::table('customers', function (Blueprint $table) {
             $table->integer('channel_id')->unsigned()->nullable()->after('customer_group_id');
 
-            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('SET NULL');
+            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('NO ACTION');
         });
 
         $firstChannelId = DB::table('channels')->value('id');

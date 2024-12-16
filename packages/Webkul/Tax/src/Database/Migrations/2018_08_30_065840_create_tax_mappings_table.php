@@ -20,8 +20,8 @@ return new class extends Migration
             $table->timestamps();
 
             $table->unique(['tax_category_id', 'tax_rate_id'], 'tax_map_index_unique');
-            $table->foreign('tax_category_id')->references('id')->on('tax_categories')->onDelete('cascade');
-            $table->foreign('tax_rate_id')->references('id')->on('tax_rates')->onDelete('cascade');
+            $table->foreign('tax_category_id')->references('id')->on('tax_categories')->onDelete('NO ACTION');
+            $table->foreign('tax_rate_id')->references('id')->on('tax_rates')->onDelete('NO ACTION');
         });
     }
 

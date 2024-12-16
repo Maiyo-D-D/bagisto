@@ -20,8 +20,8 @@ return new class extends Migration
             $table->integer('qty')->default(0);
             $table->integer('sort_order')->default(0);
 
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-            $table->foreign('associated_product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('NO ACTION');
+            $table->foreign('associated_product_id')->references('id')->on('products')->onDelete('NO ACTION');
         });
     }
 

@@ -25,6 +25,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('product_customer_group_prices', function (Blueprint $table) {
+            // Drop the index before dropping the column
+            $table->dropUnique(['unique_id']);
             $table->dropColumn('unique_id');
         });
     }

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('locale');
             $table->text('title')->nullable();
 
-            $table->foreign('product_downloadable_link_id', 'link_translations_link_id_foreign')->references('id')->on('product_downloadable_links')->onDelete('cascade');
+            $table->foreign('product_downloadable_link_id', 'link_translations_link_id_foreign')->references('id')->on('product_downloadable_links')->onDelete('NO ACTION');
         });
     }
 

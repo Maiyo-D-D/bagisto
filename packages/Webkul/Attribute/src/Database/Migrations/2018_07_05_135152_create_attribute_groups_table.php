@@ -21,7 +21,7 @@ return new class extends Migration
             $table->boolean('is_user_defined')->default(1);
 
             $table->unique(['attribute_family_id', 'name']);
-            $table->foreign('attribute_family_id')->references('id')->on('attribute_families')->onDelete('cascade');
+            $table->foreign('attribute_family_id')->references('id')->on('attribute_families')->onDelete('NO ACTION');
         });
 
         Schema::create('attribute_group_mappings', function (Blueprint $table) {
@@ -30,8 +30,8 @@ return new class extends Migration
             $table->integer('position')->nullable();
 
             $table->primary(['attribute_id', 'attribute_group_id']);
-            $table->foreign('attribute_id')->references('id')->on('attributes')->onDelete('cascade');
-            $table->foreign('attribute_group_id')->references('id')->on('attribute_groups')->onDelete('cascade');
+            $table->foreign('attribute_id')->references('id')->on('attributes')->onDelete('NO ACTION');
+            $table->foreign('attribute_group_id')->references('id')->on('attribute_groups')->onDelete('NO ACTION');
         });
     }
 

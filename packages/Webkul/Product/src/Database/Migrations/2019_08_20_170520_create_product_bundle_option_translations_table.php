@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('product_bundle_option_id')->unsigned();
 
             $table->unique(['product_bundle_option_id', 'locale'], 'product_bundle_option_translations_option_id_locale_unique');
-            $table->foreign('product_bundle_option_id', 'product_bundle_option_translations_option_id_foreign')->references('id')->on('product_bundle_options')->onDelete('cascade');
+            $table->foreign('product_bundle_option_id', 'product_bundle_option_translations_option_id_foreign')->references('id')->on('product_bundle_options')->onDelete('NO ACTION');
         });
     }
 

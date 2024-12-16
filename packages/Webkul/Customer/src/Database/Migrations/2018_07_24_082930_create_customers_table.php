@@ -34,7 +34,7 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
 
-            $table->foreign('customer_group_id')->references('id')->on('customer_groups')->onDelete('set null');
+            $table->foreign('customer_group_id')->references('id')->on('customer_groups')->onDelete('NO ACTION');
         });
     }
 

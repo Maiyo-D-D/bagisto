@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::table('cart_shipping_rates', function (Blueprint $table) {
             $table->integer('cart_id')->nullable()->unsigned();
 
-            $table->foreign('cart_id')->references('id')->on('cart')->onDelete('cascade');
+            $table->foreign('cart_id')->references('id')->on('cart')->onDelete('NO ACTION');
         });
     }
 

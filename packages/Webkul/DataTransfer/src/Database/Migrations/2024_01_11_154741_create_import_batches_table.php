@@ -18,7 +18,7 @@ return new class extends Migration
             $table->json('summary')->nullable();
             $table->integer('import_id')->unsigned();
 
-            $table->foreign('import_id')->references('id')->on('imports')->onDelete('cascade');
+            $table->foreign('import_id')->references('id')->on('imports')->onDelete('NO ACTION');
         });
     }
 

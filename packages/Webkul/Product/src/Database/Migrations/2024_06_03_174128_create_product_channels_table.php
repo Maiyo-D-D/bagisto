@@ -17,8 +17,8 @@ return new class extends Migration
 
             $table->unique(['product_id', 'channel_id']);
 
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('NO ACTION');
+            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('NO ACTION');
         });
 
         $firstChannelId = DB::table('channels')->value('id');

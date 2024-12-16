@@ -21,7 +21,7 @@ return new class extends Migration
             $table->json('additional')->nullable();
             $table->timestamps();
 
-            $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
+            $table->foreign('order_id')->references('id')->on('orders')->onDelete('NO ACTION');
         });
     }
 

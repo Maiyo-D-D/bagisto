@@ -26,7 +26,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->unique(['channel_id', 'locale']);
-            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('cascade');
+            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('NO ACTION');
         });
     }
 

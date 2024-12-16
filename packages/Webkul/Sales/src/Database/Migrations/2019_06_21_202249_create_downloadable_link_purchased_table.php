@@ -30,9 +30,9 @@ return new class extends Migration
             $table->integer('download_canceled')->default(0);
             $table->timestamps();
 
-            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
-            $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
-            $table->foreign('order_item_id')->references('id')->on('order_items')->onDelete('cascade');
+            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('NO ACTION');
+            $table->foreign('order_id')->references('id')->on('orders')->onDelete('NO ACTION');
+            $table->foreign('order_item_id')->references('id')->on('order_items')->onDelete('NO ACTION');
         });
     }
 

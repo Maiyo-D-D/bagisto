@@ -36,9 +36,9 @@ return new class extends Migration
             $table->json('additional')->nullable();
             $table->timestamps();
 
-            $table->foreign('parent_id')->references('id')->on('refund_items')->onDelete('cascade');
-            $table->foreign('order_item_id')->references('id')->on('order_items')->onDelete('cascade');
-            $table->foreign('refund_id')->references('id')->on('refunds')->onDelete('cascade');
+            $table->foreign('parent_id')->references('id')->on('refund_items')->onDelete('NO ACTION');
+            $table->foreign('order_item_id')->references('id')->on('order_items')->onDelete('NO ACTION');
+            $table->foreign('refund_id')->references('id')->on('refunds')->onDelete('NO ACTION');
         });
     }
 

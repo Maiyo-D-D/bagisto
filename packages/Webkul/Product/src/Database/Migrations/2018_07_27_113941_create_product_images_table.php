@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('product_id')->unsigned();
             $table->integer('position')->default(0)->unsigned();
 
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('NO ACTION');
         });
     }
 

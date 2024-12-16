@@ -19,8 +19,8 @@ return new class extends Migration
             $table->integer('customer_id')->unsigned();
             $table->integer('cart_rule_id')->unsigned();
 
-            $table->foreign('cart_rule_id')->references('id')->on('cart_rules')->onDelete('cascade');
-            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
+            $table->foreign('cart_rule_id')->references('id')->on('cart_rules')->onDelete('NO ACTION');
+            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('NO ACTION');
         });
     }
 

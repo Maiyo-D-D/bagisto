@@ -28,8 +28,8 @@ return new class extends Migration
             $table->integer('attribute_id')->unsigned();
 
             $table->unique(['channel', 'locale', 'attribute_id', 'product_id'], 'chanel_locale_attribute_value_index_unique');
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-            $table->foreign('attribute_id')->references('id')->on('attributes')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('NO ACTION');
+            $table->foreign('attribute_id')->references('id')->on('attributes')->onDelete('NO ACTION');
         });
     }
 

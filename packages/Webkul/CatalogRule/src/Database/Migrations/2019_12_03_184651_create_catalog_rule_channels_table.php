@@ -18,8 +18,8 @@ return new class extends Migration
             $table->integer('channel_id')->unsigned();
 
             $table->primary(['catalog_rule_id', 'channel_id']);
-            $table->foreign('catalog_rule_id')->references('id')->on('catalog_rules')->onDelete('cascade');
-            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('cascade');
+            $table->foreign('catalog_rule_id')->references('id')->on('catalog_rules')->onDelete('NO ACTION');
+            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('NO ACTION');
         });
     }
 

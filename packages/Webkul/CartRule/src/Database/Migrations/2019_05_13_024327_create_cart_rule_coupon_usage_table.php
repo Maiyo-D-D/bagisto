@@ -19,8 +19,8 @@ return new class extends Migration
             $table->integer('cart_rule_coupon_id')->unsigned();
             $table->integer('customer_id')->unsigned();
 
-            $table->foreign('cart_rule_coupon_id')->references('id')->on('cart_rule_coupons')->onDelete('cascade');
-            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
+            $table->foreign('cart_rule_coupon_id')->references('id')->on('cart_rule_coupons')->onDelete('NO ACTION');
+            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('NO ACTION');
         });
     }
 

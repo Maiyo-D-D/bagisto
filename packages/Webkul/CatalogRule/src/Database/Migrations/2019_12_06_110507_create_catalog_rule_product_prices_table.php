@@ -24,10 +24,10 @@ return new class extends Migration
             $table->integer('catalog_rule_id')->unsigned();
             $table->integer('channel_id')->unsigned();
 
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-            $table->foreign('customer_group_id')->references('id')->on('customer_groups')->onDelete('cascade');
-            $table->foreign('catalog_rule_id')->references('id')->on('catalog_rules')->onDelete('cascade');
-            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('NO ACTION');
+            $table->foreign('customer_group_id')->references('id')->on('customer_groups')->onDelete('NO ACTION');
+            $table->foreign('catalog_rule_id')->references('id')->on('catalog_rules')->onDelete('NO ACTION');
+            $table->foreign('channel_id')->references('id')->on('channels')->onDelete('NO ACTION');
         });
     }
 

@@ -24,8 +24,8 @@ return new class extends Migration
             $table->timestamps();
 
             $table->unique(['product_id', 'customer_group_id']);
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-            $table->foreign('customer_group_id')->references('id')->on('customer_groups')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('NO ACTION');
+            $table->foreign('customer_group_id')->references('id')->on('customer_groups')->onDelete('NO ACTION');
         });
     }
 

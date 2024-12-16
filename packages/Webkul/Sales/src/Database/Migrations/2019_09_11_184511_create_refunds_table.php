@@ -40,7 +40,7 @@ return new class extends Migration
             $table->integer('order_id')->unsigned()->nullable();
             $table->timestamps();
 
-            $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
+            $table->foreign('order_id')->references('id')->on('orders')->onDelete('NO ACTION');
         });
     }
 

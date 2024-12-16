@@ -36,9 +36,9 @@ return new class extends Migration
             $table->json('additional')->nullable();
             $table->timestamps();
 
-            $table->foreign(['customer_id'])->references('id')->on('customers')->onDelete('cascade');
-            $table->foreign(['cart_id'])->references('id')->on('cart')->onDelete('cascade');
-            $table->foreign(['order_id'])->references('id')->on('orders')->onDelete('cascade');
+            $table->foreign(['customer_id'])->references('id')->on('customers')->onDelete('NO ACTION');
+            $table->foreign(['cart_id'])->references('id')->on('cart')->onDelete('NO ACTION');
+            $table->foreign(['order_id'])->references('id')->on('orders')->onDelete('NO ACTION');
         });
     }
 

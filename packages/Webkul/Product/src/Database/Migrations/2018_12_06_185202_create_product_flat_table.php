@@ -43,9 +43,9 @@ return new class extends Migration
             $table->boolean('visible_individually')->nullable();
 
             $table->unique(['product_id', 'channel', 'locale'], 'product_flat_unique_index');
-            $table->foreign('attribute_family_id')->references('id')->on('attribute_families')->onDelete('restrict');
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-            $table->foreign('parent_id')->references('id')->on('product_flat')->onDelete('cascade');
+            $table->foreign('attribute_family_id')->references('id')->on('attribute_families')->onDelete('NO ACTION');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('NO ACTION');
+            $table->foreign('parent_id')->references('id')->on('product_flat')->onDelete('NO ACTION');
         });
     }
 

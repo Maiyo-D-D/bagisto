@@ -482,13 +482,13 @@
                                     <x-installer::form.control-group.control
                                         type="select"
                                         name="db_connection"
-                                        ::value="envData.db_connection ?? 'mysql'"
+                                        ::value="envData.db_connection ?? 'sqlsrv'"
                                         rules="required"
                                         :label="trans('installer::app.installer.index.environment-configuration.database-connection')"
                                         :placeholder="trans('installer::app.installer.index.environment-configuration.database-connection')"
                                     >
                                         <option
-                                            value="mysql"
+                                            value="sqlsrv"
                                             selected
                                         >
                                             @lang('installer::app.installer.index.environment-configuration.mysql')
